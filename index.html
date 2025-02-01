@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanatana Dharma - Dashavatara</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body class="body">
+    <header class="header">
+        <h1 class="title">Sanatana Dharma</h1>
+        <p class="subtitle">The Eternal Path</p>
+        <button id="dark-mode-toggle">🌙 Dark Mode</button>
+
+    </header>
+
+    <main class="main">
+        <article class="article">
+            <section class="section dashaavatar">
+                <div class="slideshow-container" id="slideshow"></div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 Sanatana Dharma. All rights reserved.</p>
+    </footer>
+
+    <script src="src/js/app.js" type="module"></script>
+    <script>
+        class App {
+            #theme = 'light';
+            #colorScheme = {
+                light: {
+                    '--bg-color': '#f5f5f5',
+                    '--text-color': '#333333',
+                    '--accent-color': '#6200ea',
+                    '--header-footer-bg': 'linear-gradient(to right, #ff7e5f, #feb47b)',
+                    '--slide-bg': '#ffffff'
+                },
+                dark: {
+                    '--bg-color': '#0e0e0e',
+                    '--text-color': '#e0e0e0',
+                    '--accent-color': '#bb86fc',
+                    '--header-footer-bg': 'linear-gradient(to right, #2c3e50, #4ca1af)',
+                    '--slide-bg': '#1a1a1a'
+                }
+            };
+
+            constructor() {
+                this.applyTheme(this.#theme);
+                this.#initEventListeners();
+            }
+
+            applyTheme(theme) {
+                this.#theme = theme;
+                const root = document.documentElement;
+                const themeColors = this.#colorScheme[theme];
+
+                for (const [key, value] of Object.entries(themeColors)) {
+                    root.style.setProperty(key, value);
+                }
+            }
+
+            toggleTheme() {
+                this.applyTheme(this.#theme === 'light' ? 'dark' : 'light');
+            }
+
+            #initEventListeners() {
+                const themeToggleButton = document.getElementById('theme-toggle');
+                if (themeToggleButton) {
+                    themeToggleButton.addEventListener('click', () => this.toggleTheme());
+                }
+            }
+        }
+
+        // Initialize the App
+        document.addEventListener('DOMContentLoaded', () => new App());
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables for Light Mode */
+:root {
+    --primary-gradient: linear-gradient(135deg, #8B0000, #4B0082);  /* Maroon to Purple */
+    --secondary-gradient: linear-gradient(135deg, #FF4500, #FFD700); /* Saffron to Gold */
+    --accent-gradient: linear-gradient(135deg, #3A0CA3, #D00000);  /* Indigo to Crimson */
+    --background-gradient: linear-gradient(to bottom, #FFF8E7, #FFFFF0); /* Soft Beige to Ivory */
+
+    --text-color: #2F2F2F;  /* Dark Gray for text */
+    --header-text-color: #FFFFFF; /* White for headers */
+    --footer-bg: linear-gradient(135deg, #4B0082, #000000); /* Indigo to Black */
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+    --primary-gradient: linear-gradient(135deg, #2A003D, #1A0033); /* Cosmic Purple to Midnight Indigo */
+    --secondary-gradient: linear-gradient(135deg, #4B0082, #000000); /* Deep Indigo to Black */
+    --accent-gradient: linear-gradient(135deg, #D00000, #4B0082); /* Crimson to Purple */
+    --background-gradient: linear-gradient(to bottom, #0D0D0D, #1A0033); /* Deep Space Black to Midnight Indigo */
+
+    --text-color: #CCCCCC; /* Moonlight Gray for text */
+    --header-text-color: #FFD700; /* Glowing Saffron for headers */
+    --footer-bg: linear-gradient(135deg, #1A0033, #000000); /* Midnight Indigo to Black */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Georgia', serif;
+    background: var(--background-gradient);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Header */
+.header {
+    background: var(--primary-gradient);
+    color: var(--header-text-color);
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: background 0.5s ease;
+}
+
+.title {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #FFD700; /* Golden highlight */
+}
+
+/* Main Content */
+.main {
+    padding: 30px 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    background: var(--secondary-gradient);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    transition: background 0.5s ease;
+}
+
+/* Slide Content */
+.slide {
+    display: none;
+    text-align: center;
+    padding: 30px;
+    background: var(--background-gradient);
+    transition: background 0.5s ease;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide h1, .slide h2 {
+    color: #8B0000;
+    margin-bottom: 15px;
+}
+
+body.dark-mode .slide h1, body.dark-mode .slide h2 {
+    color: #FFD700; /* Glowing saffron in dark mode */
+}
+
+.slide p {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+/* Images in Slides */
+.slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Controls Styling */
+.slide-controls {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.slide-controls button {
+    background: var(--accent-gradient);
+    color: var(--header-text-color);
+    border: none;
+    padding: 12px 25px;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease, background 0.5s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.slide-controls button:hover {
+    background: var(--secondary-gradient);
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background: var(--footer-bg);
+    color: var(--header-text-color);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Dark Mode Toggle Button */
+#dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--accent-gradient);
+    color: var(--header-text-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+    background: var(--primary-gradient);
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .subtitle {
+        font-size: 1.3rem;
+    }
+
+    .slide p {
+        font-size: 1rem;
+    }
+
+    .slide-controls button {
+        padding: 10px 20px;
+    }
+}
