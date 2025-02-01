@@ -7,26 +7,40 @@
 
 /* Root Variables for Light Mode */
 :root {
-    --primary-gradient: linear-gradient(135deg, #8B0000, #4B0082);  /* Maroon to Purple */
-    --secondary-gradient: linear-gradient(135deg, #FF4500, #FFD700); /* Saffron to Gold */
-    --accent-gradient: linear-gradient(135deg, #3A0CA3, #D00000);  /* Indigo to Crimson */
-    --background-gradient: linear-gradient(to bottom, #FFF8E7, #FFFFF0); /* Soft Beige to Ivory */
+    --primary-gradient: linear-gradient(135deg, #8B0000, #4B0082);
+    /* Maroon to Purple */
+    --secondary-gradient: linear-gradient(135deg, #FF4500, #FFD700);
+    /* Saffron to Gold */
+    --accent-gradient: linear-gradient(135deg, #3A0CA3, #D00000);
+    /* Indigo to Crimson */
+    --background-gradient: linear-gradient(to bottom, #FFF8E7, #FFFFF0);
+    /* Soft Beige to Ivory */
 
-    --text-color: #2F2F2F;  /* Dark Gray for text */
-    --header-text-color: #FFFFFF; /* White for headers */
-    --footer-bg: linear-gradient(135deg, #4B0082, #000000); /* Indigo to Black */
+    --text-color: #2F2F2F;
+    /* Dark Gray for text */
+    --header-text-color: #FFFFFF;
+    /* White for headers */
+    --footer-bg: linear-gradient(135deg, #4B0082, #000000);
+    /* Indigo to Black */
 }
 
 /* Dark Mode Variables */
 body.dark-mode {
-    --primary-gradient: linear-gradient(135deg, #2A003D, #1A0033); /* Cosmic Purple to Midnight Indigo */
-    --secondary-gradient: linear-gradient(135deg, #4B0082, #000000); /* Deep Indigo to Black */
-    --accent-gradient: linear-gradient(135deg, #D00000, #4B0082); /* Crimson to Purple */
-    --background-gradient: linear-gradient(to bottom, #0D0D0D, #1A0033); /* Deep Space Black to Midnight Indigo */
+    --primary-gradient: linear-gradient(135deg, #2A003D, #1A0033);
+    /* Cosmic Purple to Midnight Indigo */
+    --secondary-gradient: linear-gradient(135deg, #4B0082, #000000);
+    /* Deep Indigo to Black */
+    --accent-gradient: linear-gradient(135deg, #D00000, #4B0082);
+    /* Crimson to Purple */
+    --background-gradient: linear-gradient(to bottom, #0D0D0D, #1A0033);
+    /* Deep Space Black to Midnight Indigo */
 
-    --text-color: #CCCCCC; /* Moonlight Gray for text */
-    --header-text-color: #FFD700; /* Glowing Saffron for headers */
-    --footer-bg: linear-gradient(135deg, #1A0033, #000000); /* Midnight Indigo to Black */
+    --text-color: #CCCCCC;
+    /* Moonlight Gray for text */
+    --header-text-color: #FFD700;
+    /* Glowing Saffron for headers */
+    --footer-bg: linear-gradient(135deg, #1A0033, #000000);
+    /* Midnight Indigo to Black */
 }
 
 /* Body Styling */
@@ -58,7 +72,8 @@ body {
 .subtitle {
     font-size: 1.5rem;
     font-style: italic;
-    color: #FFD700; /* Golden highlight */
+    color: #FFD700;
+    /* Golden highlight */
 }
 
 /* Main Content */
@@ -91,13 +106,16 @@ body {
     display: block;
 }
 
-.slide h1, .slide h2 {
+.slide h1,
+.slide h2 {
     color: #8B0000;
     margin-bottom: 15px;
 }
 
-body.dark-mode .slide h1, body.dark-mode .slide h2 {
-    color: #FFD700; /* Glowing saffron in dark mode */
+body.dark-mode .slide h1,
+body.dark-mode .slide h2 {
+    color: #FFD700;
+    /* Glowing saffron in dark mode */
 }
 
 .slide p {
@@ -143,10 +161,13 @@ body.dark-mode .slide h1, body.dark-mode .slide h2 {
 .footer {
     background: var(--footer-bg);
     color: var(--header-text-color);
-    text-align: center;
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 1.2px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Dark Mode Toggle Button */
