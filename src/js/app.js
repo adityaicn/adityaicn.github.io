@@ -1,10 +1,12 @@
 import { SlideShow } from "./slide.js";
-import { slides } from "./data.js";
+import { Dashavatara, Tridev } from "./data.js";
 
 // Initialize the slideshow
-const slideshowContainer = document.getElementById('slideshow');
-new SlideShow(slideshowContainer, slides);
+const showDashavatara = document.getElementById('dashavatara');
+new SlideShow(showDashavatara, Dashavatara);
 
+const showTridev = document.getElementById("tridev");
+new SlideShow(showTridev, Tridev);
 // ======================
 
 class App {

@@ -1,5 +1,5 @@
 // Dashavatara Data (All 10 Avatars with Detailed Stories and Lessons)
-const slides = [
+const Dashavatara = [
     {
         title: "Matsya Avatar",
         content: `
@@ -92,6 +92,38 @@ const slides = [
     }
 ];
 
-export {slides}
+const Tridev = [
+    {
+        title: "Brahma",
+        content: `
+            <h1>Brahma</h1>
+            <h2>The Creator – The Architect of the Universe</h2>
+            <p>Brahma, the first member of the Holy Trinity (Trimurti), is known as the Creator. He is said to have created the world and all living beings from his own being. Often depicted with four heads, each representing the four Vedas, Brahma is revered as the source of knowledge and creativity in the universe.</p>
+            <p><strong>Lesson:</strong> Brahma teaches us the importance of creation, knowledge, and the power of intellect in the universe. His story reminds us to constantly seek wisdom and understand our purpose in creation.</p>
+        `
+    },
+    {
+        title: "Vishnu",
+        content: `
+            <h1>Vishnu</h1>
+            <h2>The Preserver – The Protector of the Universe</h2>
+            <p>Vishnu is the second member of the Trimurti and is known as the Preserver. He is responsible for maintaining order and harmony in the universe. Vishnu’s avatars, like those in the Dashavatara, manifest to restore balance when the forces of chaos and evil overwhelm the world. Vishnu is depicted with a discus, conch, and a mace, symbols of his divine power.</p>
+            <p><strong>Lesson:</strong> Vishnu symbolizes protection and preservation, reminding us to uphold righteousness (dharma) and protect the good in the face of adversity. His avatars teach us the value of resilience and divine intervention in times of crisis.</p>
+        `
+    },
+    {
+        title: "Shiva",
+        content: `
+            <h1>Shiva</h1>
+            <h2>The Destroyer – The Transformer of the Universe</h2>
+            <p>Shiva, the third member of the Trimurti, is known as the Destroyer or Transformer. Contrary to what his title might suggest, Shiva’s role is not to bring harm but to destroy in order to recreate, ensuring the continuity of the cycle of life. He is often depicted as meditating in the Himalayas, with a third eye, a snake around his neck, and a trident in his hand. Shiva represents the ultimate reality, transcendent and immanent.</p>
+            <p><strong>Lesson:</strong> Shiva teaches us that destruction is a necessary part of life’s cycle, clearing the path for renewal and growth. His teachings encourage us to let go of the old to make space for new beginnings, embracing change as a means of transformation.</p>
+        `
+    }
+];
+
+
+
+export {Dashavatara, Tridev}
 
 
