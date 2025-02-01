@@ -144,11 +144,9 @@ body.dark-mode .slide h1, body.dark-mode .slide h2 {
     background: var(--footer-bg);
     color: var(--header-text-color);
     text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    margin-top: 40px;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4);
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
 }
 
 /* Dark Mode Toggle Button */

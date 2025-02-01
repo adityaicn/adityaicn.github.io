@@ -9,10 +9,18 @@ new SlideShow(slideshowContainer, slides);
 
 class App {
     constructor() {
+        this.copyright = `<p>&copy; Aditya - ${new Date().getFullYear()} </p>`;
         this.body = document.body;
         this.toggleButton = document.getElementById('dark-mode-toggle');
         this.initTheme();
         this.addEventListeners();
+        this.init()
+    }
+
+    init() {
+        const printCopy = document.querySelector(".footer");
+        printCopy.innerHTML = this.copyright;
+
     }
 
     initTheme() {
